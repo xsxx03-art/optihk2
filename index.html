@@ -291,26 +291,40 @@
        <!-- Team section Scripts -->
 
 	   <script>
-		document.addEventListener('DOMContentLoaded', function() {
-			var teamSection = document.getElementById('team');
-			if (!teamSection) return;
-			var teamMembers = document.querySelectorAll('#team .pixova-team');
-			if (teamMembers.length === 0) return;
-	
-			var observer = new IntersectionObserver(function(entries) {
-				entries.forEach(function(entry) {
-					if (entry.isIntersecting) {
-						teamMembers.forEach(function(member) {
-							member.classList.add('animated');
-						});
-						observer.unobserve(teamSection); // Trigger only once
-					}
-				});
-			}, { threshold: 0.7 }); // Trigger when 70% visable
-	
-			observer.observe(teamSection);
-		});
-	  </script>
-
-	</body>
-</html>
+        document.addEventListener('DOMContentLoaded', function() {
+            var teamSection = document.getElementById('team');
+            if (!teamSection) return;
+            var teamMembers = document.querySelectorAll('#team .pixova-team');
+            if (teamMembers.length === 0) return;
+        
+            var observer = null;
+        
+            
+            function getThreshold() {
+                var width = window.innerWidth;
+                if (width <= 480) return 0.1;      // phone
+                if (width <= 768) return 0.3;      // pad
+                return 0.6;                         // desktop
+            }
+        
+            function initObserver() {
+                if (observer) observer.disconnect();
+                var threshold = getThreshold();
+                observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            teamMembers.forEach(function(member) {
+                                member.classList.add('animated');
+                            });
+                            observer.unobserve(teamSection);
+                        }
+                    });
+                }, { threshold: threshold });
+                observer.observe(teamSection);
+            }
+        
+            initObserver();
+            
+            window.addEventListener('resize', initObserver);
+        });
+        </script>
