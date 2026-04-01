@@ -3390,7 +3390,7 @@ input, select, textarea {
 
 	#banner {
 		padding: 10em 0 4.75em 0;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.7), rgba(46, 49, 65, 0.0)), url("../../images/optihk_chip_photos/DSC_2979.JPG") ;
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.7), rgba(46, 49, 65, 0.0)), url("../../images/optihk_chip_photos/DSC_2979.webp") ;
 		background-size: cover;
 		background-position: center 30%;
 		background-repeat: no-repeat ;
@@ -4735,7 +4735,7 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 		#banner {
-			background-image: url('../../images/optihk_chip_photos/DSC_2979.JPG') !important;  
+			background-image: url('../../images/optihk_chip_photos/DSC_2979.webp') !important;  
 			background-size: cover !important;
 			background-attachment: scroll !important;  
 			background-position: center center !important;
