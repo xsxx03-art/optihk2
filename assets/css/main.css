@@ -4466,52 +4466,49 @@ input, select, textarea {
 
 
 
-/* ========================
-   团队区域增强样式
-   （增大头像、统一对齐、扩大宽度）
-   ======================== */
 
-/* 1. 头像统一高度（桌面端 180px） */
+
+
 .pixova-team-img {
     width: auto;
-    height: 180px;              /* 所有头像高度一致，确保名字对齐 */
+    height: 180px;              
     max-width: 100%;
-    object-fit: cover;          /* 保证图片不变形，裁剪填充 */
+    object-fit: cover;          
     border-radius: 50%;
     transition: all 0.4s cubic-bezier(0.805, 0.075, 0.315, 1.41);
     display: block;
     margin: 0 auto;
 }
 
-/* 头像容器：相对定位 + 固定底部间距 */
+
 .pixova-team-image {
     position: relative;
-    margin-bottom: 20px;        /* 头像与名字间距统一 */
+    margin-bottom: 20px;       
     text-align: center;
 }
 
-/* 社交悬浮窗位置微调（适应更高头像） */
+
 .pixova-team-description {
-    top: 85%;                   /* 让悬浮窗紧贴头像底部 */
-    /* 其他原有样式保持不变 */
+    top: 85%;                   
+    
 }
 
-/* 卡片间距与宽度调整 */
+
 .team-grid {
-    gap: 40px;                  /* 增大卡片间距，避免拥挤 */
+    gap: 40px;                  
 }
 .pixova-team {
-    width: calc(25% - 40px);    /* 配合新 gap 重新计算宽度 */
-    min-width: 240px;           /* 保证头像显示完整 */
+    width: calc(25% - 40px);    
+    min-width: 240px;          
 }
 
-/* 2. 团队区域整体加宽（桌面端） */
+
 .pixova-team-section .inner {
-    max-width: 1400px;          /* 从默认 1200px 增大，让布局更宽松 */
-    padding: 0 2em;             /* 增加左右内边距，防止贴边 */
+    max-width: 1400px;         
+    padding: 0 2em;           
 }
 
-/* ========== 响应式调整 ========== */
+
 @media screen and (max-width: 1024px) {
     .pixova-team {
         width: calc(33.333% - 40px);
@@ -4519,7 +4516,7 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 768px) {
-    /* 平板头像缩小至 140px */
+
     .pixova-team-img {
         height: 140px;
     }
@@ -4537,12 +4534,12 @@ input, select, textarea {
         min-width: 200px;
     }
     .pixova-team-section .inner {
-        padding: 0 1.5em;       /* 平板适当缩小内边距 */
+        padding: 0 1.5em;      
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* 手机头像缩小至 120px */
+   
     .pixova-team-img {
         height: 120px;
     }
@@ -4560,5 +4557,55 @@ input, select, textarea {
     }
     .pixova-team-section .inner {
         padding: 0 1em;
+    }
+}
+
+
+
+
+
+
+
+/* Header Logo style */
+#header h1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    line-height: normal;
+}
+
+#header h1 a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: none;
+    line-height: normal;
+}
+
+#header h1 a img.header-logo,
+#header h1 img {
+    height: 115px !important;
+    width: auto !important;
+    display: block;
+    vertical-align: middle;
+}
+
+
+#header h1 a {
+    position: relative;
+    top: 0;
+}
+
+
+@media screen and (max-width: 736px) {
+    #header h1 a img.header-logo,
+    #header h1 img {
+        height: 75px !important;
+    }
+    
+    
+    #header h1 a {
+        
     }
 }
