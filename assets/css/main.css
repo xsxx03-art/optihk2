@@ -3389,7 +3389,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0;
+		padding: 18em 0 4.75em 0;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.7), rgba(46, 49, 65, 0.0)), url("../../images/optihk_chip_photos/DSC_2979.webp") ;
 		background-size: cover;
 		background-position: center 30%;
@@ -3397,9 +3397,15 @@ input, select, textarea {
 	}
 
 		#banner .inner {
+			
 			margin: 0 auto;
 			width: 55em;
-		    text-align: center
+		    text-align: center;
+			position: relative;
+            z-index: 15;
+            pointer-events: auto;
+			top:-5em;
+			
 		}
 
 		#banner .inner img {
@@ -3528,7 +3534,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 5em 2em 4.25em 2em ;
+				padding: 12em 2em 4.25em 2em ;
 				margin-bottom: -2.5em;
 			}
 
