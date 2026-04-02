@@ -192,7 +192,7 @@
                 <p id="dynamic-desc">A quantum technology company on a mission to build and deploy the world's leading
                     integrated photonic solutions.</p>
             </div>
-         
+
 
             <button class="carousel-arrow prev" aria-label="next">&#10094;</button>
             <button class="carousel-arrow next" aria-label="previous">&#10095;</button>
@@ -496,9 +496,21 @@
                 function getThreshold() {
                     var width = window.innerWidth;
                     if (width <= 480) return 0.1;      // phone
-                    if (width <= 768) return 0.3;      // pad
+                    if (width <= 768) return 0.2;      // pad
                     return 0.6;                         // desktop
                 }
+
+                setTimeout(function () {
+                    var teamMembers = document.querySelectorAll('#team .pixova-team');
+                    var anyAnimated = Array.from(teamMembers).some(m => m.classList.contains('animated'));
+                    if (!anyAnimated && teamMembers.length) {
+
+                        teamMembers.forEach(function (member) {
+                            member.classList.add('animated');
+                        });
+                        if (observer) observer.disconnect();
+                    }
+                }, 1500);
 
                 function initObserver() {
                     if (observer) observer.disconnect();
