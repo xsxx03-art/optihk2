@@ -3390,7 +3390,13 @@ input, select, textarea {
 
 	#banner {
 		
-		padding: clamp(50px, 27vh, 300px) 0;
+		    
+			padding: 0;
+			
+			height: 90vh;
+			
+			min-height: 400px;
+			max-height: 1100px;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.7), rgba(46, 49, 65, 0.0)), url("../../images/optihk_chip_photos/DSC_2979.webp") ;
 		background-size: cover;
 		background-position: center 30%;
