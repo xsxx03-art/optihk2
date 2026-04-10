@@ -3279,6 +3279,7 @@ input, select, textarea {
 		top: 0;
 		visibility: hidden;
 		width: 100%;
+		z-index: 10001;
 	}
 
 		#menu .inner {
@@ -3345,6 +3346,7 @@ input, select, textarea {
 					line-height: 1.85em;
 					padding: 0.75em 0;
 					text-transform: uppercase;
+					
 				}
 
 					#menu .links li a:hover {
@@ -4780,4 +4782,12 @@ input, select, textarea {
 
 
 
-
+.menu-toggle,
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active {
+    border: none !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+    outline: none !important;
+}

@@ -152,19 +152,7 @@
                 });
             }
 
-            if (typeof $ !== 'undefined') {
-                $('#menu .close').off('click').on('click', function (e) {
-                    e.preventDefault();
-                    $('body').removeClass('is-menu-visible');
-                });
-                $('#menu .links a').off('click').on('click', function () {
-                    $('body').removeClass('is-menu-visible');
-                });
-                $('.menu-toggle').off('click').on('click', function (e) {
-                    e.preventDefault();
-                    $('body').addClass('is-menu-visible');
-                });
-            }
+           
         })();
     </script>
 
