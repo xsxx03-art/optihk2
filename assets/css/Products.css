@@ -14,7 +14,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 p, li, a, table, td, th,
-.page-title, .text-col, .feature-list,
+.page-title, .text-col, 
 .product-table, #header nav a {
     font-family: inherit;
 }
@@ -64,39 +64,23 @@ p, li, a, table, td, th,
     letter-spacing: -0.01em;
 }
 
-.feature-list {
-    list-style: none;
-}
 
-.feature-list li {
-    font-size: 1.2rem;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: baseline;
+
+.feature-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: #c6ddff;
     opacity: 0;
     transform: translateY(-30px);
     transition: none;
+    margin: 0;
 }
 
-.feature-list li::before {
-    content: "•";
-    color: #4dffff;
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-right: 16px;
-    line-height: 1;
+.text-col.animate .feature-text {
+    animation: dropIn 1s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+    animation-delay: 0.1s;
 }
 
-.text-col.animate .feature-list li {
-    animation: dropIn 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
-}
-
-.text-col.animate .feature-list li:nth-child(1) { animation-delay: 0.05s; }
-.text-col.animate .feature-list li:nth-child(2) { animation-delay: 0.15s; }
-.text-col.animate .feature-list li:nth-child(3) { animation-delay: 0.25s; }
-.text-col.animate .feature-list li:nth-child(4) { animation-delay: 0.35s; }
-.text-col.animate .feature-list li:nth-child(5) { animation-delay: 0.45s; }
 
 @keyframes dropIn {
     0% {
@@ -204,9 +188,7 @@ p, li, a, table, td, th,
 }
 
 @media (max-width: 480px) {
-    .feature-list li {
-        font-size: 1rem;
-    }
+
     .text-col h2 {
         font-size: 1.8rem;
     }
